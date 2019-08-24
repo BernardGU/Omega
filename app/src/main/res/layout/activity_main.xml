@@ -12,7 +12,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="bienvenido"
+        android:text="Bienvenido!"
         android:textSize="40sp"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
