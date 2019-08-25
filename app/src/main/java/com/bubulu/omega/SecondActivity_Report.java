@@ -92,7 +92,7 @@ public class SecondActivity_Report extends AppCompatActivity {
                 a.setEncontrado(false);
                 a.setPerdido(true);
                 a.writeToDatabase(db);
-
+                    //WEDIDITBOYS
                 AlertDialog.Builder builder = new AlertDialog.Builder(SecondActivity_Report.this);
                 builder.setTitle("Éxito");
                 builder.setMessage("Espero lo encontremos pronto");
