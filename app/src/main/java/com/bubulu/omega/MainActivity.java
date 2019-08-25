@@ -1,6 +1,8 @@
 package com.bubulu.omega;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -8,6 +10,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
     private Button LB_Reportar;
+    private Button LB_feed;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,14 +18,41 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         LB_Reportar = (Button) findViewById(R.id.LB_Reportar);
+        LB_feed = (Button) findViewById(R.id.LB_feed);
 
+        //Boton Reportar
         LB_Reportar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
-                finish();
+                moveToReportar();
             }
 
         });
+
+        //Boton Feed
+        LB_feed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                moveToFeed();
+            }
+
+        });
+    }
+
+
+    //Funcion void a reportar
+    private void moveToReportar()
+    {
+        Intent intent = new Intent(MainActivity.this, SecondActivity_Report.class);
+        startActivity(intent);
+    }
+
+    //Funcion void a feed
+    private void moveToFeed()
+    {
+        Intent intent = new Intent(MainActivity.this, ThirdActivity_Feed.class);
+        startActivity(intent);
     }
 }
