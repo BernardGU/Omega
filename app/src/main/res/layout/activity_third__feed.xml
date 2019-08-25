@@ -7,6 +7,4 @@
     android:background="#379FE5"
     tools:context=".ThirdActivity_Feed">
 
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

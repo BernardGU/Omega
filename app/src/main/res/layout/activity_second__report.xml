@@ -8,6 +8,20 @@
     tools:context=".SecondActivity_Report">
 
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reporte"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
     <EditText
         android:id="@+id/txt_raza"
         android:layout_width="wrap_content"
@@ -16,6 +30,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Raza"
+        android:hint="Raza"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -28,6 +43,7 @@
         android:id="@+id/LB_submit"
         android:layout_width="245dp"
         android:layout_height="63dp"
+        android:layout_marginBottom="16dp"
         android:backgroundTint="#FFFFFF"
         android:text="Guardar"
         android:textColor="#000000"
@@ -46,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.519"
+        app:layout_constraintVertical_bias="0.736"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
     <EditText
@@ -57,6 +73,7 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Nombre"
+        android:hint="Nombre"
         android:textColor="#FFFFFF"
         android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_raza"
@@ -75,8 +92,8 @@
         android:backgroundTint="#FFFFFF"
         android:textColor="#FFFFFF"
         android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
-        android:maxLines="6"
-        android:minLines="3"
+        android:maxLines="3"
+        android:minLines="2"
         app:layout_constraintBottom_toTopOf="@+id/LB_submit"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
