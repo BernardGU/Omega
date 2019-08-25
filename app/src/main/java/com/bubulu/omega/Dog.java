@@ -113,6 +113,8 @@ public class Dog {
         d.put("breed", this.breed);
         d.put("description", this.description);
         d.put("imageLink", this.imageLink);
+        d.put("perdido", this.perdido);
+        d.put("encontrado", this.encontrado);
 
         db.collection("Dog")
                 .document(String.valueOf(id))
