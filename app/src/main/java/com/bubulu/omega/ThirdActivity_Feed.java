@@ -33,7 +33,7 @@ public class ThirdActivity_Feed extends AppCompatActivity {
 
 
 
-        listItems.add(new Entidad(R.drawable.omegalogo, "TITULO 1", "CONTENIDO 1"));
+        listItems.add(new Entidad(R.drawable.omegalogo, "Cuco", "no se"));
         listItems.add(new Entidad(R.drawable.omegalogo, "TITULO 2", "CONTENIDO 2"));
         listItems.add(new Entidad(R.drawable.omegalogo, "TITULO 3", "CONTENIDO 3"));
         listItems.add(new Entidad(R.drawable.omegalogo, "TITULO 4", "CONTENIDO 4"));
