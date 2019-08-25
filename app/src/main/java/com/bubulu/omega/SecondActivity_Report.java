@@ -8,7 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class SecondActivity_Report extends AppCompatActivity {
+
+    FirebaseFirestore db;
 
     private EditText txt_Nombre;
     private EditText txt_raza;
@@ -36,13 +40,23 @@ public class SecondActivity_Report extends AppCompatActivity {
 
         //st_nombre = txt_Nombre.getText().toString();
         //st_raza = txt_raza.getText().toString();
-        //st_desc = txt_desx
+        //st_desc =
+
+        db = FirebaseFirestore.getInstance();
+        Dog.generateId(db);
 
         // Boton Guardar
         LB_encontrado.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
+                Dog a = new Dog();
+                    a.setName(txt_Nombre.getText().toString());
+                    a.setBreed(txt_raza.getText().toString());
+                    a.setDescription(txt_desc.getText().toString());
+                    a.setEncontrado(true);
+                    a.setPerdido(false);
+                    a.writeToDatabase(db);
                 moveToMain();
             }
         });
@@ -51,6 +65,13 @@ public class SecondActivity_Report extends AppCompatActivity {
             @Override
             public void onClick(View v)
             {
+                Dog a = new Dog();
+                a.setName(txt_Nombre.getText().toString());
+                a.setBreed(txt_raza.getText().toString());
+                a.setDescription(txt_desc.getText().toString());
+                a.setEncontrado(false);
+                a.setPerdido(true);
+                a.writeToDatabase(db);
                 moveToMain();
             }
         });
