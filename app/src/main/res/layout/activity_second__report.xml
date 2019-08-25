@@ -8,19 +8,37 @@
     tools:context=".SecondActivity_Report">
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Reporte"
-        android:textColor="#FFFFFF"
-        android:textSize="40sp"
+    <Button
+        android:id="@+id/LB_encontrado"
+        android:layout_width="150dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Perro Perdido"
+        android:textColor="#000000"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.079"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LB_Reportar"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <Button
+        android:id="@+id/LB_perdido"
+        android:layout_width="150dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Perro Encontrado"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LB_Reportar"
+        app:layout_constraintVertical_bias="0.293" />
 
     <EditText
         android:id="@+id/txt_raza"
@@ -36,25 +54,55 @@
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintHorizontal_bias="0.511"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.456" />
 
-    <Button
-        android:id="@+id/LB_submit"
-        android:layout_width="245dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="16dp"
+    <EditText
+        android:id="@+id/txt_Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
-        android:text="Guardar"
-        android:textColor="#000000"
-        android:textSize="20sp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="textPersonName"
+        android:text="Nombre (Si aplica)"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_raza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.511"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.896" />
+
+    <EditText
+        android:id="@+id/txt_desc"
+        style="@style/Widget.MaterialComponents.TextInputEditText.OutlinedBox"
+        android:layout_width="317dp"
+        android:layout_height="176dp"
+        android:background="@android:color/transparent"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:fadeScrollbars="true"
+        android:hint="Descripcion"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:maxLines="3"
+        android:minLines="0"
+        android:outlineProvider="bounds"
+        android:text="Descripcion"
+        android:textAlignment="center"
+        android:textColor="#FFFFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LB_Reportar"
-        app:layout_constraintVertical_bias="0.293" />
+        app:layout_constraintTop_toBottomOf="@+id/txt_raza"
+        app:layout_constraintVertical_bias="0.202" />
 
     <ImageButton
         android:id="@+id/li_upload"
@@ -67,41 +115,18 @@
         app:layout_constraintVertical_bias="0.786"
         app:srcCompat="@android:drawable/ic_menu_camera" />
 
-    <EditText
-        android:id="@+id/txt_Nombre"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#FFFFFF"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nombre"
-        android:hint="Nombre"
-        android:textColorHint="#FFFFFF"
+        android:text="Reporte"
         android:textColor="#FFFFFF"
-        android:textSize="26sp"
-        app:layout_constraintBottom_toTopOf="@+id/txt_raza"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.873" />
-
-    <EditText
-        android:id="@+id/txt_desc"
-        android:layout_width="316dp"
-        android:layout_height="137dp"
-        android:backgroundTint="#FFFFFF"
-        android:gravity="top"
-        android:hint="Description"
-        android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
-        android:maxLines="3"
-        android:minLines="1"
-        android:textColor="#FFFFFF"
-        android:textColorHint="#FFFFFF"
-        android:layout_margin="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/LB_submit"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_raza" />
-
+        app:layout_constraintVertical_bias="0.041" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
