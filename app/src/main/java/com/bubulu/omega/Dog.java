@@ -27,6 +27,16 @@ public class Dog {
         this.encontrado = false;
     }
 
+    public Dog(long id, String name, String breed, String description, String imageLink, Boolean perdido, Boolean encontrado) {
+        this.id = id;
+        this.name = name;
+        this.breed = breed;
+        this.description = description;
+        this.imageLink = imageLink;
+        this.perdido = perdido;
+        this.encontrado = encontrado;
+    }
+
     public Dog(Map<String, Object> readDog) {
         this.id = (long) readDog.get("id");
         this.name = (String) readDog.get("name");
@@ -108,7 +118,7 @@ public class Dog {
         }
 
         Map<String, Object> d = new HashMap<>();
-        d.put("id", String.valueOf(this.id));
+        d.put("id", this.id);
         d.put("name", this.name);
         d.put("breed", this.breed);
         d.put("description", this.description);
