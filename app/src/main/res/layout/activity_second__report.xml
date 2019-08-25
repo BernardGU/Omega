@@ -8,40 +8,27 @@
     tools:context=".SecondActivity_Report">
 
 
-    <ImageView
-        android:id="@+id/li_upload"
-        android:layout_width="125dp"
-        android:layout_height="125dp"
-        android:layout_marginTop="80dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/li_upload" />
-
     <EditText
         android:id="@+id/txt_raza"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Raza"
-        android:textSize="26sp"
         android:textColor="#FFFFFF"
-        android:backgroundTint="#FFFFFF"
+        android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/li_upload"
-        app:layout_constraintVertical_bias="0.124" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.416" />
 
     <Button
         android:id="@+id/LB_submit"
         android:layout_width="245dp"
         android:layout_height="63dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="#FFFFFF"
         android:text="Guardar"
         android:textColor="#000000"
@@ -51,6 +38,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LB_Reportar"
         app:layout_constraintVertical_bias="0.293" />
+
+    <ImageButton
+        android:id="@+id/li_upload"
+        android:layout_width="125dp"
+        android:layout_height="98dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_raza"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
