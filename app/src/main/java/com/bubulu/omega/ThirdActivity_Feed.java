@@ -31,8 +31,6 @@ public class ThirdActivity_Feed extends AppCompatActivity {
 
         db = FirebaseFirestore.getInstance();
 
-
-
         listItems.add(new Entidad(R.drawable.omegalogo, "Cuco", "no se"));
         listItems.add(new Entidad(R.drawable.omegalogo, "TITULO 2", "CONTENIDO 2"));
         listItems.add(new Entidad(R.drawable.omegalogo, "TITULO 3", "CONTENIDO 3"));
