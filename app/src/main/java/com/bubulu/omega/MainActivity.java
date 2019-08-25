@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
     private void moveToReportar()
     {
         Intent intent = new Intent(MainActivity.this, SecondActivity_Report.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(intent);
     }
 
