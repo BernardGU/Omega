@@ -2,6 +2,7 @@ package com.bubulu.omega;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -40,10 +41,15 @@ public class SecondActivity_Report extends AppCompatActivity {
            @Override
            public void onClick(View v)
            {
-               // Crear objeto
+               moveToMain();
            }
         });
 
+    }
 
+    private void moveToMain()
+    {
+        Intent intent = new Intent(SecondActivity_Report.this, MainActivity.class);
+        startActivity(intent);
     }
 }
