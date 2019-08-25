@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/layout"
         android:layout_width="386dp"
         android:layout_height="74dp"
         android:layout_marginLeft="10sp"
@@ -27,9 +28,9 @@
                     android:id="@+id/tvName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
-
                     android:text="Name"
+
+                    android:textColor="#ffffff"
                     android:textSize="20dp"
                     android:textStyle="bold" />
 
@@ -37,16 +38,16 @@
                     android:id="@+id/tvBreed"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
                     android:text="Breed"
+                    android:textColor="#ffffff"
                     android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/tvDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="#ffffff"
                     android:text="Description"
+                    android:textColor="#ffffff"
                     android:textSize="16dp" />
             </LinearLayout>
 

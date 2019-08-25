@@ -1,10 +1,12 @@
 package com.bubulu.omega;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -43,10 +45,16 @@ public class Adaptador extends BaseAdapter {
         TextView tvName = (TextView) convertView.findViewById(R.id.tvName);
         TextView tvBreed = (TextView) convertView.findViewById(R.id.tvBreed);
         TextView tvDescription = (TextView) convertView.findViewById(R.id.tvDescription);
+        LinearLayout layout = (LinearLayout) convertView.findViewById(R.id.layout);
 
         tvName.setText(Item.getName());
         tvBreed.setText(Item.getBreed());
         tvDescription.setText(Item.getDescription());
+        if(Item.getEncontrado()) {
+            layout.setBackgroundColor(Color.parseColor("#006633"));
+        } else {
+            layout.setBackgroundColor(Color.parseColor("#990033"));
+        }
 
         return convertView;
     }
