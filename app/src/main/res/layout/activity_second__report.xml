@@ -8,6 +8,38 @@
     tools:context=".SecondActivity_Report">
 
 
+    <Button
+        android:id="@+id/LB_encontrado"
+        android:layout_width="150dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Perro Perdido"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.119"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LB_Reportar"
+        app:layout_constraintVertical_bias="0.293" />
+
+    <Button
+        android:id="@+id/LB_perdido"
+        android:layout_width="150dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="#FFFFFF"
+        android:text="Perro Encontrado"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LB_Reportar"
+        app:layout_constraintVertical_bias="0.293" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -41,21 +73,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.456" />
 
-    <Button
-        android:id="@+id/LB_submit"
-        android:layout_width="245dp"
-        android:layout_height="63dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="#FFFFFF"
-        android:text="Guardar"
-        android:textColor="#000000"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LB_Reportar"
-        app:layout_constraintVertical_bias="0.293" />
-
     <ImageButton
         android:id="@+id/li_upload"
         android:layout_width="125dp"
@@ -74,7 +91,7 @@
         android:backgroundTint="#FFFFFF"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nombre"
+        android:text="Nombre (Si aplica)"
         android:hint="Nombre"
         android:textColorHint="#FFFFFF"
         android:textColor="#FFFFFF"
@@ -89,6 +106,8 @@
         android:id="@+id/txt_desc"
         android:layout_width="316dp"
         android:layout_height="137dp"
+        android:layout_margin="100dp"
+        android:layout_marginTop="60dp"
         android:backgroundTint="#FFFFFF"
         android:gravity="top"
         android:hint="Description"
@@ -97,9 +116,8 @@
         android:minLines="1"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        android:layout_margin="100dp"
-        app:layout_constraintBottom_toTopOf="@+id/LB_submit"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txt_raza" />
 
