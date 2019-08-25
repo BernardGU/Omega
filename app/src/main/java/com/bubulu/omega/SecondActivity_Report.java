@@ -1,7 +1,9 @@
 package com.bubulu.omega;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -57,7 +59,18 @@ public class SecondActivity_Report extends AppCompatActivity {
                     a.setEncontrado(true);
                     a.setPerdido(false);
                     a.writeToDatabase(db);
-                moveToMain();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(SecondActivity_Report.this);
+                builder.setTitle("Éxito");
+                builder.setMessage("Perro añadido exitosamente");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                        moveToMain();
+                    }
+                });
+                builder.show();
             }
         });
 
@@ -72,7 +85,20 @@ public class SecondActivity_Report extends AppCompatActivity {
                 a.setEncontrado(false);
                 a.setPerdido(true);
                 a.writeToDatabase(db);
-                moveToMain();
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(SecondActivity_Report.this);
+                builder.setTitle("Éxito");
+                builder.setMessage("Espero lo encontremos pronto");
+                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.cancel();
+                        moveToMain();
+                    }
+                });
+                builder.show();
+
+
             }
         });
 
