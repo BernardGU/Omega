@@ -38,42 +38,24 @@ public class LogicActivity extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
 
-        @Override
-        public void onStart() {
-            super.onStart();
-            // Check if user is signed in (non-null) and update UI accordingly.
-            FirebaseUser currentUser = mAuth.getCurrentUser();
-            moveToMain();
-        }
-
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                mAuth.createUserWithEmailAndPassword(eTxtEmail.getText().toString(), eTxtPassword.getText().toString())
-                        .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-
-                        });
+            public void onClick(View v) {
                 moveToMain();
             }
         });
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                mAuth.signInWithEmailAndPassword(eTxtEmail.getText().toString(), eTxtPassword.getText().toString()) {
-
-                }
+            public void onClick(View v) {
+                moveToMain();
             }
-            moveToMain();
         });
     }
 
 
 
     private void moveToMain() {
-        FirebaseUser user = mAuth.getCurrentUser();
-        Toast.makeText(EmailPasswordActivity.this, "Authentication failed.",
-                Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(LogicActivity.this, MainActivity.class);
         startActivity(intent);
     }
