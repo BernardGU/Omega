@@ -13,7 +13,8 @@ public class SecondActivity_Report extends AppCompatActivity {
     private EditText txt_Nombre;
     private EditText txt_raza;
     private EditText txt_desc;
-    private Button LB_submit;
+    private Button LB_encontrado;
+    private Button LB_perdido;
     private String st_nombre = "";
     private String st_raza = "";
     private String st_desc = "";
@@ -26,7 +27,8 @@ public class SecondActivity_Report extends AppCompatActivity {
         txt_Nombre = ( EditText ) findViewById(R.id.txt_Nombre);
         txt_raza = ( EditText ) findViewById(R.id.txt_raza);
         txt_desc = ( EditText ) findViewById(R.id.txt_desc);
-        LB_submit = ( Button ) findViewById(R.id.LB_submit);
+        LB_encontrado = ( Button ) findViewById(R.id.LB_encontrado);
+        LB_perdido = ( Button ) findViewById(R.id.LB_perdido);
 
         txt_Nombre.setText(st_nombre);
         txt_raza.setText(st_raza);
@@ -37,15 +39,25 @@ public class SecondActivity_Report extends AppCompatActivity {
         //st_desc = txt_desx
 
         // Boton Guardar
-        LB_submit.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v)
-           {
-               moveToMain();
-           }
+        LB_encontrado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                moveToMain();
+            }
+        });
+
+        LB_perdido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                moveToMain();
+            }
         });
 
     }
+
+
 
     private void moveToMain()
     {
