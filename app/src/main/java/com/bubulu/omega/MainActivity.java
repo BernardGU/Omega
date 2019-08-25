@@ -7,7 +7,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button LB_Reportar;
+    private Button LB_Reportar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
