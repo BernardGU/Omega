@@ -22,7 +22,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
+        app:layout_constraintVertical_bias="0.428" />
 
     <Button
         android:id="@+id/LB_submit"
@@ -43,12 +43,45 @@
         android:id="@+id/li_upload"
         android:layout_width="125dp"
         android:layout_height="98dp"
+        app:layout_constraintBottom_toTopOf="@+id/txt_Nombre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.519"
+        app:srcCompat="@android:drawable/ic_menu_camera" />
+
+    <EditText
+        android:id="@+id/txt_Nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nombre"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"
         app:layout_constraintBottom_toTopOf="@+id/txt_raza"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56"
-        app:srcCompat="@android:drawable/ic_menu_camera" />
+        app:layout_constraintVertical_bias="0.873" />
+
+    <EditText
+        android:id="@+id/txt_desc"
+        android:layout_width="382dp"
+        android:layout_height="109dp"
+        android:gravity="top"
+        android:hint="Description"
+        android:textColorHint="#FFFFFF"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:inputType="textCapSentences|textNoSuggestions|textMultiLine"
+        android:maxLines="6"
+        android:minLines="3"
+        app:layout_constraintBottom_toTopOf="@+id/LB_submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_raza" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
