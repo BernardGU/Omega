@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -16,9 +17,13 @@ public class SecondActivity_Report extends AppCompatActivity {
 
     FirebaseFirestore db;
 
+
+    private final int PICK_IMAGE_REQUEST = 71;
+
     private EditText txt_Nombre;
     private EditText txt_raza;
     private EditText txt_desc;
+    private ImageButton LI_upload;
     private Button LB_encontrado;
     private Button LB_perdido;
     private String st_nombre = "";
@@ -30,11 +35,13 @@ public class SecondActivity_Report extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second__report);
 
+
         txt_Nombre = ( EditText ) findViewById(R.id.txt_Nombre);
         txt_raza = ( EditText ) findViewById(R.id.txt_raza);
         txt_desc = ( EditText ) findViewById(R.id.txt_desc);
         LB_encontrado = ( Button ) findViewById(R.id.LB_encontrado);
         LB_perdido = ( Button ) findViewById(R.id.LB_perdido);
+        LI_upload = (ImageButton) findViewById(R.id.li_upload);
 
         txt_Nombre.setText(st_nombre);
         txt_raza.setText(st_raza);
@@ -102,6 +109,16 @@ public class SecondActivity_Report extends AppCompatActivity {
             }
         });
 
+        LI_upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                chooseImage();
+            }
+        });
+
+
+
+
     }
 
 
@@ -111,4 +128,14 @@ public class SecondActivity_Report extends AppCompatActivity {
         Intent intent = new Intent(SecondActivity_Report.this, MainActivity.class);
         startActivity(intent);
     }
+
+
+    private void chooseImage() {
+        Intent intent = new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(Intent.createChooser(intent, "Select Picture"), PICK_IMAGE_REQUEST);
+    }
+
 }
+

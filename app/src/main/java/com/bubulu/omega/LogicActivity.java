@@ -35,13 +35,12 @@ public class LogicActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.btnLogin);
         eTxtEmail = (EditText) findViewById(R.id.eTxtEmail);
         eTxtPassword = (EditText) findViewById(R.id.eTxtPassword);
-
         mAuth = FirebaseAuth.getInstance();
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                moveToMain();
+
             }
         });
 
@@ -52,8 +51,6 @@ public class LogicActivity extends AppCompatActivity {
             }
         });
     }
-
-
 
     private void moveToMain() {
         Intent intent = new Intent(LogicActivity.this, MainActivity.class);
